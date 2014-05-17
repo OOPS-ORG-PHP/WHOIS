@@ -12,9 +12,9 @@
 		<active>yes</active>
 	</lead>
 	<date>2014-05-18</date>
-	<time>02:50:23</time>
+	<time>02:52:13</time>
 	<version>
-		<release>1.0.0</release>
+		<release>1.0.1</release>
 		<api>1.0.0</api>
 	</version>
 	<stability>
@@ -22,7 +22,7 @@
 		<api>stable</api>
 	</stability>
 	<license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
-	<notes>- release 1.0.0
+	<notes>
 </notes>
 	<contents>
 		<dir name="/">
@@ -46,6 +46,20 @@
 	</dependencies>
 	<phprelease />
 	<changelog>
+		<release>
+			<version>
+				<release>1.0.1</release>
+				<api>1.0.0</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2014-05-18</date>
+			<license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+			<notes>
+</notes>
+		</release>
 		<release>
 			<version>
 				<release>1.0.0</release>
