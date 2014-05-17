@@ -12,7 +12,7 @@
 		<active>yes</active>
 	</lead>
 	<date>2014-05-18</date>
-	<time>02:49:23</time>
+	<time>02:50:23</time>
 	<version>
 		<release>1.0.0</release>
 		<api>1.0.0</api>
@@ -26,7 +26,7 @@
 </notes>
 	<contents>
 		<dir name="/">
-			<file role="php" md5sum="970c87945899526c68c231a3dfe152e1" name="WHOIS.php" />
+			<file role="php" md5sum="8602a129a39aec7b4475190e09ea74e8" name="WHOIS.php" />
 		</dir>
 	</contents>
 	<dependencies>
