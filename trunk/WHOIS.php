@@ -61,7 +61,7 @@ Class WHOIS {
 	 * Allow ip search flags
 	 * @var array
 	 */
-	private $allows = array ('kr');
+	private $allows = array ('kr', 'jp');
 
 	private $debug = false;
 	/**#@-*/
