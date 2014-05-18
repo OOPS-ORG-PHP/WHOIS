@@ -57,6 +57,13 @@ Class WHOIS {
 	 * @var string
 	 */
 	private $next = '';
+	/**
+	 * Allow ip search flags
+	 * @var array
+	 */
+	private $allows = array ('kr');
+
+	private $debug = false;
 	/**#@-*/
 	/**
 	 * recursion 기능 동작 flag
@@ -85,6 +92,14 @@ Class WHOIS {
 	 */
 	function lookup ($domain, $server = '', $timeout = 5) {
 		$this->pnext = $this->next = '';
+
+		if ( ! strlen (trim ($domain)) ) {
+			return (object) array (
+				'server' => '',
+				'desc'   => 'No Domains'
+			);
+		}
+		$domain = trim ($domain);
 
 		if ( ! $server ) {
 			$server = $this->detect ($domain);
@@ -120,9 +135,21 @@ Class WHOIS {
 		while ( ($buf = fgets ($sock, 1024)) ) {
 			$recv .= $buf;
 			$this->nextServer ($buf);
+			if ( $this->debug ) {
+				fprintf (STDERR, "%-5s : %s\n", 'SRC', trim ($buf));
+				fprintf (STDERR, "%-5s : %s\n", 'PNEXT', $this->pnext);
+				fprintf (STDERR, "%-5s : %s\n", 'NEXT', $this->next);
+			}
 		}
 
 		fclose ($sock);
+
+		$this->next = 'ie';
+
+		if ( ip2long ($domain) && strlen ($this->next) == 2 ) {
+			if ( array_search (strtolower ($this->next), $this->allows) === false )
+				$this->next = '';
+		}
 
 		if ( $this->recurse && $this->next && $this->pnext != $this->next ) {
 			if ( ! preg_match ('/\./', $this->next) )
@@ -130,10 +157,12 @@ Class WHOIS {
 
 			$this->pnext = $this->next;
 
-			$nval = $this->query ($this->next, $domain, $timeout);
-			if ( $nval && ! preg_match ('/no match/i', $nval) ) {
+			$nserver = $this->next;
+			$this->next = '';
+			$nval = $this->query ($nserver, $domain, $timeout);
+			if ( $nval && ! preg_match ('/no match|out of this regist/i', $nval) ) {
 				$recv = $nval;
-				$server = $this->next;
+				$server = $nserver;
 			}
 		}
 
