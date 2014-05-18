@@ -144,8 +144,6 @@ Class WHOIS {
 
 		fclose ($sock);
 
-		$this->next = 'ie';
-
 		if ( ip2long ($domain) && strlen ($this->next) == 2 ) {
 			if ( array_search (strtolower ($this->next), $this->allows) === false )
 				$this->next = '';
