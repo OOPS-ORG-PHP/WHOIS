@@ -15,6 +15,8 @@ BSD
 
 http://pear.oops.org/docs/WHOIS/WHOIS.html
 
+reference is written by Korean. If you can't read korean, use [google translator](https://translate.google.com/translate?sl=ko&tl=en&js=y&prev=_t&hl=ko&ie=UTF-8&u=http%3A%2F%2Fpear.oops.org%2Fdocs%2FWHOIS%2FWHOIS.html&edit-text=).
+
 ### Installation
 
 ```shell
