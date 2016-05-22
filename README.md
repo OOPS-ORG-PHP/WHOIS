@@ -9,7 +9,7 @@ Whois gateway PHP class
 
 ### License
 
-BSD
+BSD 2 clause
 
 ### Reference
 
