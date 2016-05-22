@@ -28,7 +28,7 @@ Discovery of channel "pear.oops.org" succeeded
 ```
 
 ### Dependency
- * PHP > 5.3.0
+ * PHP >= 5.3.0
  * Pear packages 
   * [myException](https://github.com/OOPS-ORG-PHP/myException) >= 1.0.1
 
