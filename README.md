@@ -27,9 +27,10 @@ Discovery of channel "pear.oops.org" succeeded
 [root@host ~] pear install oops/WHOIS
 ```
 
-* Dependency
-  * [OOPS-ORG-PHP/myException](https://github.com/OOPS-ORG-PHP/myException)
-  * When install with pear command, dependency pacakges are automatically installed.
+### Dependency
+ * PHP > 5.3.0
+ * Pear packages 
+  * [myException](https://github.com/OOPS-ORG-PHP/myException) >= 1.0.1
 
 ### Sample codes
 
