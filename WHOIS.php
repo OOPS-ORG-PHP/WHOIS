@@ -11,12 +11,11 @@
  * @category  Networking
  * @package   WHOIS
  * @author    JoungKyun.Kim <http://oops.org>
- * @copyright (c) 2015 OOPS.org
+ * @copyright (c) 2018, OOPS.org
  * @license   BSD License
- * @version   SVN: $Id$
- * @link      http://pear.oops.org/package/WHOIS
+ * @link      https://github.com/OOPS-ORG-PHP/WHOIS
  * @since     File available since release 1.0.0
- * @example   pear_WHOIS/tests/test.php WHOIS pear package 예제 코드
+ * @example   WHOIS/tests/test.php WHOIS pear package 예제 코드
  * @filesource
  */
 
@@ -35,12 +34,11 @@ require_once 'myException.php';
  *
  * @package   WHOIS
  * @author    JoungKyun.Kim <http://oops.org>
- * @copyright (c) 2015 OOPS.org
+ * @copyright (c) 2018, OOPS.org
  * @license   BSD License
- * @version   SVN: $Id$
- * @link      http://pear.oops.org/package/WHOIS
+ * @link      https://github.com/OOPS-ORG-PHP/WHOIS
  * @since     File available since release 1.0.0
- * @example   pear_WHOIS/tests/test.php WHOIS pear 예제 코드
+ * @example   WHOIS/tests/test.php WHOIS pear 예제 코드
  */
 Class WHOIS {
 	// {{{ properities
@@ -68,7 +66,7 @@ Class WHOIS {
 	/**
 	 * recursion 기능 동작 flag
 	 * @access public
-	 * @vara boolean
+	 * @var boolean
 	 */
 	public $recurse = false;
 	// }}}
